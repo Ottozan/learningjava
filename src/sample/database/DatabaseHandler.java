@@ -55,7 +55,7 @@ public class DatabaseHandler extends Configs {
                 String query = "SELECT * FROM "+Const.USERS_TABLE +
                         " WHERE " + Const.USERS_USERNAME + "=?" + " AND " +
                         Const.USERS_PASSWORD + "=?";
-//                System.out.println(query);
+
                 try {
                     PreparedStatement preparedStatement =
                             getDbConnection().prepareStatement(query);
