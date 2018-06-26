@@ -65,7 +65,8 @@ public class LoginController {
                     System.out.println("Bem-vindo antonio "+name);
                 }
                 if (counter == 1) {
-                    System.out.println("Login bem sucedido");
+                    showAddItemScreen();
+//                    System.out.println("AddItemScreen");
                 } else {
                     Shaker usernameShaker = new Shaker(loginUsername);
                     Shaker passwordShaker = new Shaker(loginPassword);
@@ -100,13 +101,26 @@ public class LoginController {
 
         });
 
-//        loginButton.setOnAction(event -> {
-//            if (!loginText.equals("") || !loginPwd.equals("")) {
-//                loginUser(loginText, loginPwd);
-//            } else {
-//                System.out.println("Erro no login do usuário");
-//            }
-//        });
+   }
+
+
+    private void showAddItemScreen(){
+        // take users to addItem screen
+        loginSignUpButton.getScene().getWindow().hide();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/sample/view/addItem.fxml"));
+
+        try {
+            loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Parent root = loader.getRoot();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.showAndWait();
+
     }
 
 
