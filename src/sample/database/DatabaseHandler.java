@@ -1,5 +1,7 @@
 package sample.database;
 
+import sample.controller.AddItemController;
+import sample.model.Task;
 import sample.model.User;
 
 import java.sql.*;
@@ -49,6 +51,26 @@ public class DatabaseHandler extends Configs {
 
         }
 
+        public ResultSet getTasksByUser(int userId) {
+            ResultSet resultTasks = null;
+
+            String query = "SELECT * FROM "+Const.TASKS_TABLE +
+                    " WHERE " + Const.USERS_ID + "=?";
+
+            try {
+                PreparedStatement preparedStatement = getDbConnection().prepareStatement(query);
+                preparedStatement.setInt(1, userId);
+
+                resultTasks = preparedStatement.executeQuery();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            return resultTasks;
+        }
+
         public ResultSet getUser(User user) {
             ResultSet resultSet = null;
             if (!user.getUsername().equals("") || !user.getPassword().equals("")) {
@@ -75,6 +97,52 @@ public class DatabaseHandler extends Configs {
             }
 
             return resultSet;
+        }
+
+        public int getAllTasks(int userId) throws SQLException, ClassNotFoundException {
+
+            String query = "SELECT COUNT(*) FROM "+Const.TASKS_TABLE +
+                    " WHERE " + Const.USERS_ID + "=?";
+
+            PreparedStatement preparedStatement;
+            preparedStatement = getDbConnection().prepareStatement(query);
+            preparedStatement.setInt(1, userId);
+
+                ResultSet resultSet = preparedStatement.executeQuery();
+
+                while (resultSet.next()) {
+                    return resultSet.getInt(1);
+                }
+
+            return resultSet.getInt(1);
+        }
+
+        public void insertTask(Task task) {
+
+            String insert = "INSERT INTO "+Const.TASKS_TABLE + "("
+                    +Const.USERS_ID+","
+                    +Const.TASK_DATE+","
+                    +Const.TASK_DESCRIPTION+","
+                    +Const.TASK_TASK+")"
+                    +"VALUES (?,?,?,?)";
+
+            try {
+                PreparedStatement preparedStatement = getDbConnection().prepareStatement(insert);
+
+                preparedStatement.setInt(1, task.getUserId());
+                preparedStatement.setTimestamp(2,  task.getDatecreated());
+                preparedStatement.setString(3, task.getDescription());
+                preparedStatement.setString(4, task.getTask());
+
+                preparedStatement.executeUpdate();
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+
+
         }
 
 

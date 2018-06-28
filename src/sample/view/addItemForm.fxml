@@ -12,7 +12,7 @@
       <TextField fx:id="descriptionField" layoutX="174.0" layoutY="179.0" prefHeight="41.0" prefWidth="353.0" promptText="Descrição" />
       <Button fx:id="saveTaskButton" layoutX="273.0" layoutY="248.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="155.0" style="-fx-background-color: #c50e29;" text="Salvar Tarefa" textFill="#f5f4f4">
          <font>
-            <Font name="Arial Rounded MT Bold" size="14.0" />
+            <Font name="Arial Rounded MT Bold" size="17.0" />
          </font></Button>
       <AnchorPane prefHeight="67.0" prefWidth="700.0" style="-fx-background-color: #ff5252;">
          <children>
@@ -21,7 +21,14 @@
                   <Font size="24.0" />
                </font>
             </Label>
+            <Label fx:id="successLabel" layoutX="491.0" layoutY="43.0" prefHeight="17.0" prefWidth="206.0" text="Tarefa adicionada com sucesso" textFill="#f8f7f7" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
+      <Label fx:id="sucessoLabel" layoutX="470.0" layoutY="67.0" prefHeight="17.0" prefWidth="216.0" text="Item adicionado. Adicione outra tarefa." visible="false" />
+      <Button fx:id="todoButton" layoutX="530.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="145.0" text="Minha Tarefa (3)" textAlignment="CENTER" textFill="#050505" visible="false" />
    </children>
 </AnchorPane>

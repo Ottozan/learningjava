@@ -16,6 +16,9 @@ import java.util.ResourceBundle;
 
 public class AddItemController {
 
+//    private int userId;
+    public static int userId;
+
     @FXML
     private AnchorPane rootAnchorPane;
 
@@ -43,6 +46,7 @@ public class AddItemController {
             FadeTransition labelTransition = new FadeTransition(Duration.millis(2000), noTaskLabel);
 
             System.out.println("Added clicked");
+            System.out.println(userId);
             addButton.relocate(0, 20);
             noTaskLabel.relocate(0, 85);
 
@@ -66,6 +70,12 @@ public class AddItemController {
             try {
                 formPane = FXMLLoader.load(getClass().getResource(
                         "/sample/view/addItemForm.fxml"));
+
+                AddItemController.userId = getUserId();
+
+//                AddItemFormController addItemFormController = new AddItemFormController();
+//                addItemFormController.setUserId(getUserId());
+
                 // perfumaria
                 FadeTransition rootTransition = new FadeTransition(Duration.millis(2000), formPane);
                 rootTransition.setFromValue(0);
@@ -84,5 +94,15 @@ public class AddItemController {
         });
 
     }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+        System.out.println("User ID is "+this.userId);
+    }
+
+    public int getUserId() {
+        return this.userId;
+    }
+
 
 }
