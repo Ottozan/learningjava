@@ -8,23 +8,23 @@
 
 <AnchorPane fx:id="rootAnchorPane" prefHeight="70.0" prefWidth="340.0" style="-fx-background-color: #424242;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="iconImageView" fitHeight="40.0" fitWidth="53.0" layoutX="14.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="iconImageView" fitHeight="40.0" fitWidth="53.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/icon_tasks.png" />
          </image>
       </ImageView>
-      <Label fx:id="taskLabel" layoutX="68.0" layoutY="7.0" prefHeight="17.0" prefWidth="234.0" text="task" textFill="#fcf8f8">
+      <Label fx:id="taskLabel" layoutX="68.0" layoutY="1.0" prefHeight="6.0" prefWidth="234.0" text="task" textFill="#fcf8f8">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="descriptionLabel" layoutX="68.0" layoutY="35.0" prefHeight="20.0" prefWidth="257.0" style="-fx-background-color: #cccc;" text="Description" textFill="#030101">
+      <Label fx:id="descriptionLabel" layoutX="68.0" layoutY="23.0" prefHeight="20.0" prefWidth="257.0" style="-fx-background-color: #cccc;" text="Description" textFill="#030101">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="dateLabel" alignment="CENTER_RIGHT" layoutX="245.0" layoutY="55.0" prefHeight="9.0" prefWidth="80.0" text="Data Criação" textFill="#1fa140" />
-      <ImageView fx:id="deleteButton" fitHeight="25.0" fitWidth="40.0" layoutX="302.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+      <Label fx:id="dateLabel" alignment="CENTER_RIGHT" layoutX="245.0" layoutY="42.0" prefHeight="9.0" prefWidth="80.0" text="Data Criação" textFill="#1fa140" />
+      <ImageView fx:id="deleteButton" fitHeight="25.0" fitWidth="40.0" layoutX="302.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/icon_delete.png" />
          </image>
