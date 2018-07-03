@@ -81,6 +81,12 @@ public class ListController {
             listTaskField.setText("");
             listDescriptionField.setText("");
 
+//            tasks.add(myNewTask); // resolve a atualização, mas não a deleção
+            try {
+                initialize();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 

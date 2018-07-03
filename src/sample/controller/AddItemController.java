@@ -11,8 +11,7 @@ import javafx.util.Duration;
 import sample.Animations.Shaker;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
+
 
 public class AddItemController {
 
@@ -21,12 +20,6 @@ public class AddItemController {
 
     @FXML
     private AnchorPane rootAnchorPane;
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
 
     @FXML

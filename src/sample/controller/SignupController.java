@@ -1,5 +1,8 @@
 package sample.controller;
 
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -20,28 +23,25 @@ public class SignupController {
     private URL location;
 
     @FXML
-    private TextField signUpNome;
-
-    @FXML
-    private TextField signUpSobrenome;
-
-    @FXML
-    private PasswordField signUpSenha;
-
-    @FXML
-    private TextField signUpUsuario;
-
-    @FXML
-    private CheckBox signUpChBoxMasculino;
-
-    @FXML
     private CheckBox signUpChBoxFeminino;
 
     @FXML
-    private TextField signUpLocal;
+    private JFXTextField signUpNome;
 
     @FXML
-    private Button signUpButtonSignUp;
+    private JFXTextField signUpSobrenome;
+
+    @FXML
+    private JFXTextField signUpUsuario;
+
+    @FXML
+    private JFXPasswordField signUpSenha;
+
+    @FXML
+    private JFXTextField signUpLocal;
+
+    @FXML
+    private JFXButton signUpButtonSignUp;
 
     @FXML
     void initialize() {

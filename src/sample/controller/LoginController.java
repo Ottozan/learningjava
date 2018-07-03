@@ -1,12 +1,12 @@
 package sample.controller;
 
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import sample.Animations.Shaker;
 import sample.database.DatabaseHandler;
@@ -29,17 +29,16 @@ public class LoginController {
     private URL location;
 
     @FXML
-    private TextField loginUsername;
+    private JFXTextField loginUsername;
 
     @FXML
-    private PasswordField loginPassword;
+    private JFXPasswordField loginPassword;
 
     @FXML
-    private Button loginButton;
+    private JFXButton loginButton;
 
     @FXML
-    private Button loginSignUpButton;
-
+    private JFXButton loginSignUpButton;
     private DatabaseHandler databaseHandler;
 
     @FXML

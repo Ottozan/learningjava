@@ -1,5 +1,7 @@
 package sample.controller;
 
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -37,15 +39,15 @@ public class AddItemFormController {
 
     @FXML
     private Button todoButton;
-    @FXML
-    private TextField taskField;
 
     @FXML
-    private TextField descriptionField;
+    private JFXTextField taskField;
 
     @FXML
-    private Button saveTaskButton;
+    private JFXTextField descriptionField;
 
+    @FXML
+    private JFXButton saveTaskButton;
     @FXML
     void initialize() {
 
